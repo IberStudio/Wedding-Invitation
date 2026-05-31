@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal Union | The Wedding of Julian & Elena</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-rays"></div>
+            <h1 class="hero-names serif">
+                J <span>&</span> E
+            </h1>
+        </div>
+    </div>
+
+    <!-- Floating Music Button -->
+    <button id="music-toggle" class="music-toggle" aria-label="Toggle Background Music">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+    </button>
+    <audio id="bg-music" loop>
+        <source src="assets/music/bg_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero">
+        <img src="assets/images/hero.webp" alt="Hero Background" class="hero-bg polaroid">
+        <img src="/assets/ornaments/leaf.svg" alt="" class="ornament leaf">
+        <img src="/assets/ornaments/flower.svg" alt="" class="ornament flower">
+        <div class="hero-content">
+            <p class="uppercase">The Wedding Invitation of</p>
+            <h1 class="hero-names serif">Julian <br><span>&</span> Elena</h1>
+            <p class="hero-date">24 . 12 . 2026</p>
+            <p class="hero-invite-text">We are delighted to invite you to celebrate our union.</p>
+            
+            <div id="guest-name" class="guest-name">
+                <p class="label-muted">Dear Honored Guest</p>
+                <h2 id="guest-name-text" class="serif italic">Our Special Guest</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Bride & Groom Section -->
+    <section id="couple" class="couple-section">
+        <div class="container text-center">
+            <h2 class="section-title serif">The Happy Couple</h2>
+            <div class="couple-grid">
+                <!-- Groom -->
+                <div class="person-card">
+                    <div class="person-photo groom">
+                        <img src="assets/images/groom.webp" alt="Julian">
+                        <a href="#" class="social-placeholder">@julian_alistair</a>
+                    </div>
+                    <h3 class="person-name serif">Julian Alistair</h3>
+                    <p class="person-parents">Son of Mr. Robert Alistair & Mrs. Susan Alistair</p>
+                </div>
+                <!-- Envelope -->
+                <img src="/assets/ornaments/envelopeFront.webp" alt="" class="ornament envelope-front">
+                <img src="/assets/ornaments/envelopeBack.webp" alt="" class="ornament envelope-back">
+                <!-- Bride -->
+                <div class="person-card">
+                    <div class="person-photo bride">
+                        <img src="assets/images/bride.webp" alt="Elena">
+                        <a href="#" class="social-placeholder">@elena_gen</a>
+                    </div>
+                    <h3 class="person-name serif">Elena Genevieve</h3>
+                    <p class="person-parents">Daughter of Mr. Arthur Vance & Mrs. Mary Vance</p>
+                </div>
+            </div>
+            <div class="couple-ornaments">
+                <img src="/assets/ornaments/flower3.svg" alt="" class="ornament flower">
+                <img src="/assets/ornaments/flower1.svg" alt="" class="ornament flower">
+                <svg 
+                viewBox="0 0 180 250"
+                class="ornament couple-stroke left">
+                    <path class="couple-path" d="M107.471,6.891c-1.988,6.759-5.14,21.145,0.397,36.905c6.714,19.111,25.632,38.606,39.714,34.818
+                        c7.519-2.023,14.678-10.957,13.333-19.465c-1.308-8.267-10.457-14.941-17.617-14.043c-12.3,1.544-23.967,26.096-17.617,42.383
+                        c6.385,16.375,26.679,13.36,34.468,31.404c6.727,15.585-2.162,32.317-3.064,33.957c-11.028,20.055-40.766,29.912-72.511,21.191"/>
+                </svg>
+                <svg 
+                viewBox="0 0 180 250"
+                class="ornament couple-stroke right">
+                    <path class="couple-path" d="M107.471,6.891c-1.988,6.759-5.14,21.145,0.397,36.905c6.714,19.111,25.632,38.606,39.714,34.818
+                            c7.519-2.023,14.678-10.957,13.333-19.465c-1.308-8.267-10.457-14.941-17.617-14.043c-12.3,1.544-23.967,26.096-17.617,42.383
+                            c6.385,16.375,26.679,13.36,34.468,31.404c6.727,15.585-2.162,32.317-3.064,33.957c-11.028,20.055-40.766,29.912-72.511,21.191"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Event Details Section -->
+    <section id="events" class="events">
+        <div class="container text-center">
+            <h2 class="section-title serif">Wedding Events</h2>
+            <div class="event-grid">
+                <!-- Akad / Ceremony -->
+                <div class="event-card">
+                    <h3 class="event-details-title serif">Holy Matrimony</h3>
+                    <div class="event-info">
+                        <p><strong>Saturday, December 24, 2026</strong></p>
+                        <p>10:00 AM - 11:30 AM</p>
+                        <p>St. Claire’s Garden Chapel</p>
+                        <p>Beverly Hills, CA</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="maps-btn">Open Google Maps</a>
+                </div>
+                <!-- Reception -->
+                <div class="event-card">
+                    <h3 class="event-details-title serif">Wedding Reception</h3>
+                    <div class="event-info">
+                        <p><strong>Saturday, December 24, 2026</strong></p>
+                        <p>12:00 PM - 03:00 PM</p>
+                        <p>The Grand Azure Ballroom</p>
+                        <p>Beverly Hills, CA</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="maps-btn">Open Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Countdown Section -->
+    <section id="countdown" class="countdown-section">
+        <div class="container">
+            <h2 class="serif">Counting Down to Our Forever</h2>
+            <div id="countdown-timer" class="countdown-grid">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Story / Timeline Section -->
+    <section id="story" class="timeline-section">
+        <div class="story-ornaments">
+            <img src="/assets/ornaments/flower.svg" alt="" class="ornament">
+            <img src="/assets/ornaments/leaf.svg" alt="" class="ornament">
+            <img src="/assets/ornaments/leaf.svg" alt="" class="ornament">
+            <img src="/assets/ornaments/flower.svg" alt="" class="ornament">
+        </div>
+        <div class="container text-center">
+            <h2 class="section-title serif">
+                Our Journey
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-tail"></div>
+                    <p><strong>The First Encounter</strong><br>We met at a rainy coffee shop in Seattle.</p>
+                    <div class="timeline-year">2021</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-tail"></div>
+                    <p><strong>Common Ground</strong><br>Our first shared adventure exploring the Swiss Alps.</p>
+                    <div class="timeline-year">2023</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-tail"></div>
+                    <p><strong>The Proposal</strong><br>A quiet moment under the blooming cherry blossoms.</p>
+                    <div class="timeline-year">2025</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-tail"></div>
+                    <p><strong>The Big Day</strong><br>Finally beginning our life together as one.</p>
+                    <div class="timeline-year">2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container text-center">
+            <h2 class="section-title serif">Captured Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/images/venue.webp" alt="Gallery 1"></div>
+                <div class="gallery-item"><img src="assets/images/hero.webp" alt="Gallery 2"></div>
+                <div class="gallery-item"><img src="assets/images/groom.webp" alt="Gallery 3"></div>
+                <div class="gallery-item"><img src="assets/images/bride.webp" alt="Gallery 4"></div>
+                <div class="gallery-item"><img src="assets/images/venue.webp" alt="Gallery 5"></div>
+                <div class="gallery-item"><img src="assets/images/hero.webp" alt="Gallery 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. RSVP Section -->
+    <section id="rsvp" class="rsvp stack-transition">
+        <div class="container text-center">
+            <h2 class="section-title serif">Kindly RSVP</h2>
+            <div class="rsvp-form">
+                <form id="rsvp-form">
+                    <div class="form-group">
+                        <label for="name">Your Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="E.g. Mr. & Mrs. Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Will You Attend?</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="" disabled selected>Select Attendance</option>
+                            <option value="yes">Yes, I will attend</option>
+                            <option value="no">Sorry, I cannot attend</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Wishes for the Couple</label>
+                        <textarea id="message" name="message" placeholder="Your warm message..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send RSVP</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Gift Section -->
+    <section id="gifts" class="gifts">
+        <div class="container text-center">
+            <h2 class="section-title serif">A Token of Love</h2>
+            <p>Your presence is the greatest gift, but if you wish to honor us with a gift:</p>
+            <div class="gift-cards">
+                <div class="gift-card">
+                    <div class="bank-name serif">Citibank</div>
+                    <div class="account-number" id="acc1">123-456-7890</div>
+                    <div class="account-name">Julian Alistair</div>
+                    <button class="copy-btn" onclick="copyAccountNumber('acc1')">Copy Number</button>
+                </div>
+                <div class="gift-card">
+                    <div class="bank-name serif">Chase Bank</div>
+                    <div class="account-number" id="acc2">987-654-3210</div>
+                    <div class="account-name">Elena Genevieve</div>
+                    <button class="copy-btn" onclick="copyAccountNumber('acc2')">Copy Number</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Closing Section -->
+    <section id="closing" class="closing">
+        <div class="container">
+            <h2 class="serif">Thank You</h2>
+            <p>"Let love be genuine. Abide in what is good, love one another with brotherly affection. Outdo one another in showing honor."</p>
+            <div class="family-footer">
+                <p class="uppercase">We Look Forward to Seeing You</p>
+                <p>The Alistair & Vance Families</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Observer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/animation.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

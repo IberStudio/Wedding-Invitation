@@ -1,0 +1,945 @@
+/* 
+   Ethereal Union - Wedding Invitation CSS
+   Premium, Minimalist, Romantic Aesthetic
+*/
+
+:root {
+  /* Color Palette - Bold Typography Theme */
+  --c-bg: #FDFBF7; /* Cream/Paper */
+  --c-bg-accent: #F5F2ED; /* Beige */
+  --c-ink: #3D3D3D; /* Deep Charcoal */
+  --c-ink-muted: #A8A297; /* Gray-Brown */
+  --c-accent: #D4AF37; /* Gold */
+  --c-accent-secondary: #8A9A5B; /* Sage Green */
+  --c-border: #E5E1D8;
+  --c-white: #ffffff;
+
+  /* Typography */
+  --f-serif: 'Cormorant Garamond', serif;
+  --f-sans: 'Montserrat', sans-serif;
+  --f-accent: 'Playfair Display', serif;
+
+  /* Spacing */
+  --space-unit: 1rem;
+  --section-padding: 6rem;
+  --section-padding-mobile: 4rem;
+  --radius: 0px;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--f-sans);
+  background-color: var(--c-bg);
+  color: var(--c-ink);
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: var(--f-serif);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic-accent {
+  font-style: italic;
+  font-family: var(--f-serif);
+  color: var(--c-accent);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--c-accent-secondary);
+}
+
+.label-muted {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.6rem;
+  color: var(--c-ink-muted);
+}
+
+/* Layout Utilities */
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 3.5rem;
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: var(--c-accent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--c-bg-accent);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-accent);
+  border-radius: 2px;
+}
+
+/* -----------------------------------------------------------------------------
+   Ornaments
+----------------------------------------------------------------------------- */
+.ornament {
+  position: absolute;
+  width: 300px;
+  x: 0; y: 0;
+  fill: none;
+  stroke: black;
+  z-index: 1;
+}
+
+/* -----------------------------------------------------------------------------
+   Preloader
+----------------------------------------------------------------------------- */
+.loader-wrapper{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffdf8;
+  z-index: 9999;
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+.loader-wrapper.hide{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader{
+  width: 230px;
+  height: 230px;
+  border: 2px solid #d4c4a8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffdf8;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+.loader::before{
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid #d4c4a8;
+  border-radius: 50%;
+}
+
+/* Rays container */
+.loader-rays{
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  animation: rotateSun 25s linear infinite;
+}
+
+/* Rays */
+.loader-rays span{
+    position: absolute;
+    width: 8px;
+    height: 48px;
+    background: #d4c4a8;
+    top: 50%;
+    left: 50%;
+}
+
+.loader-rays span{
+    transition: height 0.5s ease;
+}
+
+.loader h1{
+  margin: 0;
+  font-weight: 500;
+  font-family: "Cormorant Garamond", serif;
+  color: #2b2b2b;
+  letter-spacing: -12px;
+  z-index: 2;
+}
+
+.loader span{
+  color: #b89b72;
+}
+/* -----------------------------------------------------------------------------
+   Music Button
+----------------------------------------------------------------------------- */
+.music-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  width: 45px;
+  height: 45px;
+  background: var(--c-white);
+  border: 1px solid var(--c-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  color: var(--c-accent);
+}
+
+.music-toggle:hover {
+  background: var(--c-accent);
+  color: var(--c-white);
+}
+
+.music-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* -----------------------------------------------------------------------------
+   Hero Section
+----------------------------------------------------------------------------- */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero .ornament {
+  width: 330;
+  z-index: -5;
+}
+
+.hero .ornament.flower {
+  top: -10%;
+  left: 65%;
+  transform: rotate(-50deg);
+}
+
+.hero .ornament.leaf{
+  top: 45%;
+  left: 38%;
+  transform: rotate(-60deg);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(4deg);
+  z-index: -1;
+}
+
+.hero-bg.polaroid{
+  width: 480px;
+  height:  470px;
+  padding:  14px 14px 70px 14px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.15);
+  object-fit: cover;
+  transform: rotate(-4deg) translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.hero-bg.polaroid:hover{
+  transform:
+    rotate(0deg)
+    scale(1.03);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.2);
+}
+
+.hero-content {
+  width: 35%;
+  height: 100%;
+  background: rgba(253, 251, 247, 0.95);
+  padding: 5rem 4rem;
+  position: relative;
+}
+
+.hero-names {
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  margin-bottom: 0.5rem;
+  line-height: 0.9;
+  font-weight: 300;
+}
+
+.hero-names span {
+  font-style: italic;
+  color: var(--c-accent);
+}
+
+.hero-date {
+  font-family: var(--f-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  color: var(--c-accent-secondary);
+}
+
+.hero-invite-text {
+  font-style: italic;
+  font-family: var(--f-serif);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: var(--c-ink-muted);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guest-name {
+  margin-top: 4rem;
+  border-top: none;
+  padding: 1.5rem;
+  background: var(--c-bg-accent);
+  border-left: 2px solid var(--c-accent-secondary);
+  text-align: left;
+}
+
+.guest-name p {
+  font-size: 0.6rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.6;
+}
+
+.guest-name h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   Bride & Groom Section
+----------------------------------------------------------------------------- */
+.couple-section {
+  height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: var(--section-padding);
+  background-color: var(--c-bg-accent);
+}
+
+.couple-grid {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.couple-grid > [class*="envelope"]{
+  width: 500px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.envelope-front {
+  filter: 
+    drop-shadow(0 10px 10px rgba(0,0,0,0.3));
+  z-index: 2;
+}
+
+.envelope-back {
+  z-index: 0;
+}
+
+.person-card {
+  text-align: center;
+}
+
+.person-photo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 340px;
+  top: 190%;
+  padding: 1rem;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 
+      0 10px 30px rgba(0,0,0,0.15);
+  transform: 
+    rotate(0deg)
+    translate(-50%, -50%);
+  transition: 
+    transform 0.1s ease,
+    box-shadow 0.4s ease;
+  z-index: 1;
+}
+  
+.person-photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.person-photo.groom {
+  left: 45%;
+  transform: 
+    rotate(-4deg)
+    translate(-50%, -50%);
+  
+}
+.person-photo.bride {
+  left: 55%;
+  transform: 
+    rotate(4deg)
+    translate(-50%, -50%);
+}
+
+.person-name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.person-parents {
+  font-size: 0.8rem;
+  color: var(--c-ink-muted);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.social-placeholder {
+  font-size: 0.75rem;
+  color: var(--c-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.couple-ornaments {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.couple-stroke {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  stroke: var(--c-accent);
+  stroke-width: 2px;
+  stroke-linecap: butt;
+  stroke-dasharray: 12;
+  fill: none;
+  z-index: -5;
+}
+  
+.couple-stroke.left {
+  transform: 
+    scaleX(-1);
+}
+
+.couple-ornaments .flower {
+  top: 10%;
+  left: 30%;
+  transform: 
+    rotate(0deg);
+  transform-origin: center;
+  filter: drop-shadow(0 5px 4px rgba(0,0,0,0.3));
+  will-change: transform;
+  z-index: 0;
+}
+  
+.couple-ornaments .flower:nth-child(even) {
+    top: 10%;
+    left: 45%;
+    transform: 
+      scaleX(-1);
+}
+
+/* -----------------------------------------------------------------------------
+   Event Details Section
+----------------------------------------------------------------------------- */
+.events {
+  padding: var(--section-padding) 0;
+  background-color: var(--c-bg-accent);
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.event-card {
+  background: var(--c-white);
+  padding: 4rem 3rem;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: none;
+}
+
+.event-details-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+  color: var(--c-accent);
+  font-weight: 700;
+  font-family: var(--f-sans);
+}
+
+.event-info {
+  margin-bottom: 2.5rem;
+}
+
+.event-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.event-info strong {
+  display: block;
+  font-size: 1.25rem;
+  font-family: var(--f-serif);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.maps-btn {
+  display: inline-block;
+  background: var(--c-accent-secondary);
+  color: var(--c-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* -----------------------------------------------------------------------------
+   Countdown Section
+----------------------------------------------------------------------------- */
+.countdown-section {
+  padding: var(--section-padding) 0;
+  background: var(--c-white);
+  color: var(--c-ink);
+  text-align: center;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 4rem auto 0;
+}
+
+.countdown-grid.done {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-item {
+  padding: 1.5rem 0;
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+}
+
+.countdown-number {
+  font-family: var(--f-serif);
+  font-size: 3rem;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.countdown-item:last-child .countdown-number {
+  color: var(--c-accent);
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+/* -----------------------------------------------------------------------------
+   Timeline Section
+----------------------------------------------------------------------------- */
+.timeline-section {
+  padding: var(--section-padding) 0;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 4rem auto 0;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--c-border);
+}
+
+.timeline-item {
+  position: relative;
+  width: fit-content;
+  max-width: 300px;
+  padding: 14px 24px;
+  background: var(--c-white);
+  border-radius: 24px;
+  font-size: 1rem;
+  transform: 
+    scale(0);
+  color: #2b2b2b;
+  line-height: 1.5;
+  box-shadow: 
+    0 10px 20px rgba(0,0,0,0.08);
+}
+
+.timeline-item:nth-child(odd),
+.timeline-item:nth-child(odd) .timeline-year {
+  justify-self: start;
+  text-align: right;
+  transform-origin: right;
+}
+
+.timeline-item:nth-child(even),
+.timeline-item:nth-child(even) .timeline-year {
+  justify-self: end;
+  text-align: left;
+  transform-origin: left;
+}
+
+.timeline-tail {
+  position: absolute;
+  top: 0;
+  width: 48px;
+  height: 24px; 
+}
+
+.timeline-item:nth-child(odd) .timeline-tail {
+  border-top: 24px solid var(--c-white);
+  border-right: 24px solid transparent;
+  right: -24px;
+}
+
+.timeline-item:nth-child(even) .timeline-tail {
+  border-top: 24px solid var(--c-white);
+  border-left: 24px solid transparent;
+  left: -24px;
+}
+
+.timeline-year {
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--c-accent);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p strong {
+  font-family: var(--f-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.story-ornaments {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding: 0 10rem;
+}
+
+.story-ornaments .ornament {
+  flex: 50%;
+  position: relative;
+  z-index: 0;
+}
+.story-ornaments .ornament:nth-child(even) {
+  justify-self: end;
+  transform: scaleX(-1);
+}
+
+/* -----------------------------------------------------------------------------
+   Gallery Section
+----------------------------------------------------------------------------- */
+.gallery {
+  height: 100vh;
+  padding: var(--section-padding) 0;
+  background: var(--c-white);
+}
+
+.gallery .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-grid {
+  position: relative;
+  height: 100%;
+}
+
+.gallery-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: 
+    translate(-50%, -50%);
+}
+
+.gallery-item img {
+  width: 480px;
+  height:  470px;
+  padding:  14px 14px 70px 14px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.15);
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* -----------------------------------------------------------------------------
+   RSVP Section
+----------------------------------------------------------------------------- */
+.rsvp {
+  padding: var(--section-padding) 0;
+  background-color: var(--c-bg-accent);
+}
+
+.rsvp-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--c-bg-accent);
+  padding: 4.5rem;
+  border: 1px solid var(--c-border);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+  color: var(--c-accent);
+  font-weight: 700;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  background: var(--c-white);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--c-ink);
+  color: var(--c-white);
+  padding: 1.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.submit-btn:hover {
+  background: var(--c-accent);
+}
+
+/* -----------------------------------------------------------------------------
+   Gift Section
+----------------------------------------------------------------------------- */
+.gifts {
+  padding: var(--section-padding) 0;
+  y: -100%;
+}
+
+.gift-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.gift-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  padding: 3rem;
+  text-align: center;
+  width: 380px;
+  position: relative;
+}
+
+.bank-name {
+  font-family: var(--f-sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+  color: var(--c-accent);
+  font-weight: 700;
+}
+
+.account-number {
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+}
+
+.account-name {
+  font-size: 0.8rem;
+  color: var(--c-ink-muted);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.copy-btn {
+  border: none;
+  background: transparent;
+  color: var(--c-accent-secondary);
+  padding: 0;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* -----------------------------------------------------------------------------
+   Closing Section
+----------------------------------------------------------------------------- */
+.closing {
+  padding: var(--section-padding) 0;
+  text-align: center;
+  background-color: var(--c-bg-accent);
+}
+
+.closing h2 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.closing p {
+  max-width: 500px;
+  margin: 0 auto 3.5rem;
+  font-family: var(--f-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--c-ink-muted);
+}
+
+.family-footer {
+  border-top: 1px solid var(--c-border);
+  padding-top: 4rem;
+}
+
+.family-footer p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+ 
